@@ -26,7 +26,7 @@ public class Block {
 	private int enhancement;
 	
 	/** The Q(s, a). */
-	private Map<DirectionEnum, Integer> Q = new HashMap<DirectionEnum, Integer>();
+	private Map<DirectionEnum, Double> Q = new HashMap<DirectionEnum, Double>();
 	
 	/**
 	 * Instantiates a new Block.
@@ -90,7 +90,7 @@ public class Block {
 		}
 		for (int i = 0; i < DirectionEnum.values().length; i++) {
 			DirectionEnum direction = DirectionEnum.values()[i];
-			Q.put(direction, 0);
+			Q.put(direction, 0.);
 		}
 	}
 	
@@ -171,7 +171,7 @@ public class Block {
 	 * 
 	 * @return the Q
 	 */
-	public Map<DirectionEnum, Integer> getQ() {
+	public Map<DirectionEnum, Double> getQ() {
 		return Q;
 	}
 	
